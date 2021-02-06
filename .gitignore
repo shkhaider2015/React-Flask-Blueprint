@@ -11,6 +11,10 @@
 # production
 /build
 
+# Flask
+venv
+__pycache__
+
 # misc
 .DS_Store
 .env.local
