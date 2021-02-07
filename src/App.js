@@ -4,6 +4,7 @@ import './App.css';
 
 const App = () => {
   const [currentTime, setCurrentTime] = React.useState(0);
+  const [myData, setMyData] = React.useState(null)
 
 
 
@@ -14,6 +15,12 @@ const App = () => {
       .then(res => res.json())
       .then( data => {
         setCurrentTime(data.time)
+      })
+
+      fetch('/hello')
+      .then(res => res.json())
+      .then(data => {
+        setMyData(data.hello)
       })
     },
     []
@@ -27,6 +34,8 @@ const App = () => {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
            {Date(currentTime)}
+           <br />
+           { myData }
         </p>
         <a
           className="App-link"
