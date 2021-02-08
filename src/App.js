@@ -34,7 +34,7 @@ const App = () => {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
            {Date(currentTime)}
-           <br />
+           <br /><span></span>
            { myData }
         </p>
         <a
